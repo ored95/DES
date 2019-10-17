@@ -2,3 +2,4 @@
 
 1. [Production System](https://en.wikipedia.org/wiki/Production_system_(computer_science))
 2. [Deductive Logic](https://en.wikipedia.org/wiki/Deductive_reasoning)
+3. [Fuzzy Logic](https://en.wikipedia.org/wiki/Fuzzy_logic)
