@@ -1,0 +1,30 @@
+Terms:
+Taganskaya, Kurskaya, Tverskaya, Okhotny Ryad, Komsomolskaya, Lubyanka, Kitay-Gorod, Tretyakovskaya, Arbatskaya, Baumanskaya
+
+Facts:
+link(Kurskaya, Baumanskaya)
+link(Kurskaya, Okhotny Ryad)
+link(Kurskaya, Taganskaya)
+link(Kurskaya, Komsomolskaya)
+link(Kitay-Gorod, Lubyanka)
+link(Kitay-Gorod, Tretyakovskaya)
+link(Kitay-Gorod, Taganskaya)
+link(Lubyanka, Okhotny Ryad)
+link(Lubyanka, Tverskaya)
+link(Arbatskaya, Okhotny Ryad)
+link(Arbatskaya, Tverskaya)
+link(Okhotny Ryad, Tverskaya)
+link(Okhotny Ryad, Tretyakovskaya)
+link(Tretyakovskaya, Taganskaya)
+pausing(Okhotny Ryad)
+pausing(Kurskaya)
+
+Rules:
+link(X, X) :- !
+link(X, Y) :- link(X, Z) and link(Z, Y) and not pausing(Z) and not pausing(X) and not pausing(Y)
+link(X, Y) :- link(Y, X)
+link(X, Y, Z) :- link(X, Y) and link(Y, Z)
+
+Goal:
+link(Taganskaya, Arbatskaya, Lubyanka)
+True
